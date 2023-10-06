@@ -46,6 +46,9 @@ class Trainer:
         )
 
         self.output_dir = output_dir
+        # check if output_dir exists; else create it
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
 
         self.info = {
             "num_epochs": num_epochs,
